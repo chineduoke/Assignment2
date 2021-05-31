@@ -1,0 +1,14 @@
+{
+  "name": "assignment-one",
+  "version": "0.0.1",
+  "description": "assignment one ",
+  "main": "index.js",
+  "author": "Chinedu",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1"
+  }
+}
