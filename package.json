@@ -27,5 +27,9 @@
     "@types/jquery": "^3.5.5",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.6.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/chineduoke/Assignment-one.git",
+  "author": "Chinedu Okechukwu",
+  "license": "MIT"
 }
