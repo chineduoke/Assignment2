@@ -13,20 +13,13 @@
 </head>
 <body>
   <!--Navigation section-->
-  <header>
-    <%- include('./components/header.ejs') %>
-  </header>
   
-
-  <!-- Main Content-->
-  <main>
-    <%- include('./content/' + page + '.ejs') %>
-  </main>
+  <div class="container">
+    <h1>Welcome to the <%= title %> page</h1>
+  </div>
   
   <!-- Bottom Nav -->
-  <footer>
-    <%- include('./components/footer.ejs') %>
-  </footer>
+  
     <!--Javascript section-->
     <script src="/jquery/dist/jquery.min.js"></script>
   <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
