@@ -7,16 +7,16 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
+    res.render('index', { title: 'Home page', page: 'home' });
 });
 router.get('/home', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
+    res.render('index', { title: 'Home page', page: 'home' });
 });
 router.get('/about', function (req, res, next) {
-    res.render('index', { title: 'About', page: 'about' });
+    res.render('index', { title: 'About me page', page: 'about' });
 });
 router.get('/projects', function (req, res, next) {
-    res.render('index', { title: 'Projects', page: 'projects' });
+    res.render('index', { title: 'my Projects page', page: 'projects' });
 });
 router.get('/services', function (req, res, next) {
     res.render('index', { title: 'Services', page: 'services' });
