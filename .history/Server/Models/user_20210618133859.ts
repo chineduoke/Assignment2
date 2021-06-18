@@ -5,21 +5,11 @@ import passportLocalMongoose from 'passport-local-mongoose';
 const UserSchema = new Schema
 ({
     username: String,
-    emailAddress: String,
-    displayName: String,
-    created:
-    {
-        type: Date,
-        default: Date.now()
-    },
-    updated:
-    {
-        type: Date,
-        default: Date.now()
-    }
+    password: String,
+    
 },
 {
-    collection: "users"
+    collection: "details"
 });
 
 UserSchema.plugin(passportLocalMongoose);
@@ -32,8 +22,7 @@ declare global
     {
         _id: String,
         username: String,
-        emailAddress: String,
-        displayName: String
+        password: String,
     }
 }
-export default Model;
+export default Model; 

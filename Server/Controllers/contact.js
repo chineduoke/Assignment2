@@ -5,12 +5,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProcessDeletePage = exports.ProcessUpdatePage = exports.DisplayUpdatePage = exports.DisplayContactListPage = void 0;
 const contact_1 = __importDefault(require("../Models/contact"));
+const Util_1 = require("../Util");
 function DisplayContactListPage(req, res, next) {
     contact_1.default.find(function (err, contactList) {
         if (err) {
             return console.error(err);
         }
-        res.render('index', { title: 'Contact List', page: 'contactlist', contact: contactList });
+        res.render('index', { title: 'Contact List', page: 'contactlist', contact: contactList, displayName: Util_1.UserDisplayName(req) });
     });
 }
 exports.DisplayContactListPage = DisplayContactListPage;
@@ -22,7 +23,7 @@ function DisplayUpdatePage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Update', page: 'update', contact: contactToUpdate });
+        res.render('index', { title: 'Update', page: 'update', contact: contactToUpdate, displayName: Util_1.UserDisplayName(req) });
     });
 }
 exports.DisplayUpdatePage = DisplayUpdatePage;

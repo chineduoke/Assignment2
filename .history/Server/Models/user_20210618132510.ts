@@ -7,6 +7,7 @@ const UserSchema = new Schema
     username: String,
     emailAddress: String,
     displayName: String,
+    password: String,
     created:
     {
         type: Date,
@@ -19,7 +20,7 @@ const UserSchema = new Schema
     }
 },
 {
-    collection: "users"
+    collection: "details"
 });
 
 UserSchema.plugin(passportLocalMongoose);
@@ -36,4 +37,4 @@ declare global
         displayName: String
     }
 }
-export default Model;
+export default Model; 
