@@ -68,19 +68,3 @@ export function ProcessUpdatePage(req: Request, res: Response, next: NextFunctio
       res.redirect('/contactlist');
     });
 }
-
-export function ProcessDeletePage(req: Request, res: Response, next: NextFunction): void
-{
-    let id = req.params.id;
-
-  // db.contact.remove({"_id: id"})
-  Contact.remove({_id: id}, (err) => {
-    if(err)
-    {
-      console.error(err);
-      res.end(err);
-    }
-
-    res.redirect('/contactlist');
-  });
-}

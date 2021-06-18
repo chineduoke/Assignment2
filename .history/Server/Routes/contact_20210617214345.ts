@@ -3,7 +3,7 @@ const router = express.Router();
 export default router;
 
 // instantiate an object of type contact
-import { DisplayContactListPage, DisplayUpdatePage, ProcessUpdatePage, ProcessDeletePage } from '../Controllers/contact';
+import { DisplayContactListPage, DisplayUpdatePage, ProcessUpdatePage } from '../Controllers/contact';
 
 /* GET /contact-list page. */
 router.get('/', DisplayContactListPage);
@@ -15,8 +15,8 @@ router.get('/update/:id', DisplayUpdatePage);
 
 
 
-/* POST - process /contact list/edit/:id page */
+/* POST - process /clothing-list/edit/:id page */
 router.post('/update/:id', ProcessUpdatePage);
 
-/* GET - process /contact list/delete/:id */
-router.get('/delete/:id', ProcessDeletePage);
+/* GET - process /clothing-list/delete/:id */
+//router.get('/delete/:id', ProcessDeletePage);

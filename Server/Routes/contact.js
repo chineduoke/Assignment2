@@ -8,4 +8,7 @@ const router = express_1.default.Router();
 exports.default = router;
 const contact_1 = require("../Controllers/contact");
 router.get('/', contact_1.DisplayContactListPage);
+router.get('/update/:id', contact_1.DisplayUpdatePage);
+router.post('/update/:id', contact_1.ProcessUpdatePage);
+router.get('/delete/:id', contact_1.ProcessDeletePage);
 //# sourceMappingURL=contact.js.map
