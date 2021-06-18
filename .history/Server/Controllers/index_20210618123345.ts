@@ -34,9 +34,8 @@ export function DisplayLoginPage(req: Request, res: Response, next: NextFunction
 {
     if(!req.user)
     {
-        return res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
+        res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
     }
-    return res.redirect('/contactlist');
 }
 
 export function ProcessLoginPage(req: Request, res: Response, next: NextFunction): void

@@ -4,7 +4,7 @@ export default router;
 
 
 // create an index controller instance
-import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayServicesPage, ProcessLoginPage } from '../Controllers/index';
+import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);
@@ -27,6 +27,3 @@ router.get('/contact', DisplayContactPage);
 
 /*  display login page */
 router.get('/login', DisplayLoginPage);
-
-/*  process login page when user clicks Login Button */
-router.post('/login', ProcessLoginPage);
