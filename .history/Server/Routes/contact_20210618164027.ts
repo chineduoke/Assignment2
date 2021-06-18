@@ -8,7 +8,7 @@ import { DisplayContactListPage, DisplayUpdatePage, ProcessUpdatePage, ProcessDe
 //import util
 import {AuthGuard} from '../Util';
 /* GET /contact-list page. */
-router.get('/',  DisplayContactListPage);
+router.get('/', AuthGuard, DisplayContactListPage);
 
 
 
