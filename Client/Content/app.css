@@ -12,9 +12,21 @@ h1 {
 	text-align: center;
 }
 
+#foot {
+		
+
+}
+
+#ab {
+	position:absolute ;
+	
+
+}
+
 #about {
 	position:relative ;
 	left: 500px;
+    margin-bottom: 100px;
 
 }
 
